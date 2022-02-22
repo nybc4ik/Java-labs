@@ -26,7 +26,7 @@ public class Performance {
         Arrays.sort(myArray);                          //сортировка массива
         int key = Arrays.binarySearch(myArray, balls); //поиск индекса элемента в массиве
 
-        if (key < (students/4)){                       //вывод искомой отметки студента
+        if (key < (students/4)){                       //вывод искомой отметки студента и проверка результата с ожидаемым
             System.out.println("Отметка 2");
             if (this.mark == 2){
                 System.out.println("Success");}
