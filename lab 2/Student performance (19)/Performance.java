@@ -16,17 +16,17 @@ public class Performance {
         this.mark = mark;         // ожидаемая отметка
 
         System.out.println("Введите баллы студентов:");
-        myArray = new int[students]; // обозначенние колличества элементов в массиве
+        myArray = new int[students];          // обозначенние колличества элементов в массиве
         for(int i = 0; i < students; i++) {
-            int b = console.nextInt(); //баллы студента
-            myArray[i]= b;} //заполнение ячеек массива данными о студентах
+            int b = console.nextInt();        //баллы студента
+            myArray[i]= b;}                   //заполнение ячеек массива данными о студентах
 
-        int balls = myArray[this.student-1]; // ввод баллов студента в отдельную переменную
+        int balls = myArray[this.student-1];  // ввод баллов студента в отдельную переменную
 
-        Arrays.sort(myArray); //сортировка массива
+        Arrays.sort(myArray);                          //сортировка массива
         int key = Arrays.binarySearch(myArray, balls); //поиск индекса элемента в массиве
 
-        if (key < (students/4)){ //вывод искомой отметки студента
+        if (key < (students/4)){                       //вывод искомой отметки студента
             System.out.println("Отметка 2");
             if (this.mark == 2){
                 System.out.println("Success");}
