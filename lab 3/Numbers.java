@@ -61,7 +61,6 @@ public class Numbers {
                     Big_array[0][i] = Big_array[0][i + 1];
                     Big_array[0][i + 1] = f;
                 }
-
             }
         }
         System.out.println("Вывод чисел в порядке основаном на колличестве различных цифр в десятичном представлении");
