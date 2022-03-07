@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Main {
     static int a;
     static int [] Arr;
+    static int [] expectedArray;
 
     public static void main(String[] args) {
         Arr = new int [0];
@@ -15,7 +16,7 @@ public class Main {
             Test exm = new Test();}
         else {
             System.out.println("Введите данные");
-            Numbers num = new Numbers(Arr);
+            Numbers num = new Numbers(Arr, expectedArray);
         }
     }
 }
