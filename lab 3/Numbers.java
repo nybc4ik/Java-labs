@@ -9,11 +9,14 @@ public class Numbers {
     int c;
     int d;
     int f;
+    int t;
     int size;
+    int key;
     volatile boolean checkMark;
 
-    public Numbers(int[] ArrayNum) {
-
+    public Numbers(int[] ArrayNum, int [] expectedArray) {
+        t = 0;
+        key = 0;
         Scanner console = new Scanner(System.in);
         if ((ArrayNum.length) == 0) {
             System.out.println("Введите колличество чисел:");
@@ -23,6 +26,9 @@ public class Numbers {
             for (int i = 0; i < c; i++) {
                 ArrayNum[i] = console.nextInt();
             }
+        }
+        else{
+            t = 1;
         }
         c = ArrayNum.length;
         Big_array = new int[2][c];
@@ -44,7 +50,7 @@ public class Numbers {
         //Вывод чисел до сортировки
         for (int m = 0; m < c; m++) {
             //System.out.println(Big_array[0][m]);
-            System.out.println(Big_array[1][m]);
+            System.out.println(Big_array[0][m]);
         }
         checkMark = false;
 
@@ -67,6 +73,20 @@ public class Numbers {
         for (int m = 0; m < c; m++) {
             System.out.println(Big_array[0][m]);
             //System.out.println(Big_array[1][m]);
+        }
+        if(t == 1){
+            System.out.println("Проверка вывода с ожидаемым:");
+            for (int o = 0; o < c; o++) {
+                if(Big_array[0][o] != expectedArray[o]){
+                    key = key + 1;
+                }
+            }
+            if(key == 0){
+                System.out.println("Success");
+            }
+            else{
+                System.out.println("False");
+            }
         }
     }
 }
